@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phishing Awareness Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎣 Phishing Awareness Simulator</h1>
+        <p>Learn how to identify phishing attacks and improve your cybersecurity awareness.</p>
+
+        <div class="quiz-box">
+            <h2>Email Analysis Quiz</h2>
+
+            <div id="question-container">
+                <h3 id="email-title"></h3>
+                <p id="email-content"></p>
+
+                <button onclick="answer('phishing')" class="danger">
+                    Phishing
+                </button>
+
+                <button onclick="answer('safe')" class="safe">
+                    Safe
+                </button>
+            </div>
+
+            <h2 id="feedback"></h2>
+            <h2 id="score"></h2>
+
+            <button id="nextBtn" onclick="nextQuestion()" style="display:none;">
+                Next Question
+            </button>
+        </div>
+
+        <div class="tips">
+            <h2>Cybersecurity Tips</h2>
+            <ul>
+                <li>Verify the sender's email address.</li>
+                <li>Do not click suspicious links.</li>
+                <li>Enable Multi-Factor Authentication (MFA).</li>
+                <li>Use strong passwords.</li>
+                <li>Keep software updated.</li>
+            </ul>
+        </div>
+
+        <div class="url-checker">
+            <h2>URL Safety Checker</h2>
+
+            <input type="text" id="urlInput"
+                   placeholder="Enter URL">
+
+            <button onclick="checkURL()">Check URL</button>
+
+            <p id="urlResult"></p>
+        </div>
+
+        <div class="password-checker">
+            <h2>Password Strength Checker</h2>
+
+            <input type="password" id="passwordInput"
+                   placeholder="Enter Password">
+
+            <button onclick="checkPassword()">
+                Check Password
+            </button>
+
+            <p id="passwordResult"></p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
